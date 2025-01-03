@@ -295,7 +295,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.lenovo_msm8953
+    android.hardware.light-service.lenovo_msm8953
 
 # LiveDisplay
 PRODUCT_PACKAGES += \

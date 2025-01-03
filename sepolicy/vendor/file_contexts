@@ -9,7 +9,7 @@
 /vendor/lib(64)?/libgpudataproducer\.so        u:object_r:same_process_hal_file:s0
 
 # HALs
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.lenovo_msm8953                      u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light-service\.lenovo_msm8953                      u:object_r:hal_light_default_exec:s0
 
 # I/O
 # This node is already labelled by QCOM but Lineage overrides it with sysfs_io_sched_tunable label
