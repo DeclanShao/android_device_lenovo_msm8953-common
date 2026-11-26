@@ -492,9 +492,9 @@ const char QCameraParameters::KEY_QC_NOISE_REDUCTION_MODE_VALUES[] = "noise-redu
 const char QCameraParameters::KEY_TS_MAKEUP[] = "tsmakeup";
 const char QCameraParameters::KEY_TS_MAKEUP_WHITEN[] = "tsmakeup_whiten";
 const char QCameraParameters::KEY_TS_MAKEUP_CLEAN[] = "tsmakeup_clean";
-const char QCameraParameters::KEY_XM_MAKEUP[] = "xiaomi-still-beautify-values";
-const char QCameraParameters::KEY_XM_MAKEUP_WHITEN[] = "xiaomi-beauty-skin-color";
-const char QCameraParameters::KEY_XM_MAKEUP_CLEAN[] = "xiaomi-beauty-skin-smooth";
+const char QCameraParameters::KEY_XM_MAKEUP[] = "lenovo-still-beautify-values";
+const char QCameraParameters::KEY_XM_MAKEUP_WHITEN[] = "lenovo-beauty-skin-color";
+const char QCameraParameters::KEY_XM_MAKEUP_CLEAN[] = "lenovo-beauty-skin-smooth";
 #endif
 
 //KEY to share HFR batch size with video encoder.
@@ -10596,7 +10596,7 @@ bool QCameraParameters::getTsMakeupInfo(int &whiteLevel, int &cleanLevel) const
             }
             xm_makeup_enable++;
             enableMakeup = atoi(xm_makeup_enable) > 0;
-            LOGD("Xiaomi makeup enable %d", (int)enableMakeup);
+            LOGD("Lenovo makeup enable %d", (int)enableMakeup);
             if (enableMakeup) {
                 whiteLevel = getInt(QCameraParameters::KEY_XM_MAKEUP_WHITEN) * 10;
                 cleanLevel = getInt(QCameraParameters::KEY_XM_MAKEUP_CLEAN) * 10;

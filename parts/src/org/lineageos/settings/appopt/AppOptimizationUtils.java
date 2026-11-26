@@ -55,11 +55,11 @@ public final class AppOptimizationUtils {
     // profile and a full compile costs hundreds of MB and many minutes
     public static final String GMS_PACKAGE = "com.google.android.gms";
 
-    // Handled by the xiaomiparts_appopt init service, which runs as shell because
+    // Handled by the lenovoparts_appopt init service, which runs as shell because
     // ART only takes compile requests from root or shell
-    private static final String PROP = "sys.xiaomiparts.appopt";
+    private static final String PROP = "sys.lenovoparts.appopt";
     private static final String PROP_REQUEST = PROP + ".request";
-    private static final String PROP_SVC = "init.svc.xiaomiparts_appopt";
+    private static final String PROP_SVC = "init.svc.lenovoparts_appopt";
     private static final long COMPILE_TIMEOUT_MS = 2 * 60 * 1000;
     // A full speed compile of a large app (GMS, Chrome) takes several minutes on msm8953
     private static final long COMPILE_FULL_TIMEOUT_MS = 15 * 60 * 1000;

@@ -33,7 +33,7 @@ import org.lineageos.settings.vibration.VibratorStrengthPreference;
 public class BootCompletedReceiver extends BroadcastReceiver implements Controller {
 
     private static final boolean DEBUG = false;
-    private static final String TAG = "XiaomiParts";
+    private static final String TAG = "LenovoParts";
 
     @Override
     public void onReceive(final Context context, Intent intent) {

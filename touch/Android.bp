@@ -13,9 +13,9 @@
 // limitations under the License.
 
 cc_binary {
-    name: "vendor.lineage.touch-service.xiaomi_mido",
-    init_rc: ["vendor.lineage.touch-service.xiaomi_mido.rc"],
-    vintf_fragments: ["vendor.lineage.touch-service.xiaomi_mido.xml"],
+    name: "vendor.lineage.touch-service.lenovo_msm8953",
+    init_rc: ["vendor.lineage.touch-service.lenovo_msm8953.rc"],
+    vintf_fragments: ["vendor.lineage.touch-service.lenovo_msm8953.xml"],
     relative_install_path: "hw",
     vendor: true,
     srcs: [

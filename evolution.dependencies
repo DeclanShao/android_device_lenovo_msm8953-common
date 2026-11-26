@@ -1,18 +1,18 @@
    [
      {
        "remote": "github-non-los",
-       "repository": "LineageOS/android_hardware_xiaomi",
-       "target_path": "hardware/xiaomi",
+       "repository": "LineageOS/android_hardware_lenovo",
+       "target_path": "hardware/lenovo",
        "branch": "lineage-24.0"
      },
      {
-       "repository": "vendor_xiaomi_mido",
-       "target_path": "vendor/xiaomi/mido",
+       "repository": "vendor_lenovo_msm8953",
+       "target_path": "vendor/lenovo/msm8953",
        "branch": "cnb"
      },
      {
-       "repository": "kernel_xiaomi_mido",
-       "target_path": "kernel/xiaomi/mido",
+       "repository": "kernel_lenovo_msm8953",
+       "target_path": "kernel/lenovo/msm8953",
        "branch": "cnb"
      }
    ]

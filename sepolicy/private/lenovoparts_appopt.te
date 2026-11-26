@@ -1,0 +1,18 @@
+type lenovoparts_appopt, domain, coredomain;
+type lenovoparts_appopt_exec, system_file_type, exec_type, file_type;
+
+init_daemon_domain(lenovoparts_appopt)
+
+# sh, getprop/setprop and cmd
+allow lenovoparts_appopt shell_exec:file rx_file_perms;
+allow lenovoparts_appopt toolbox_exec:file rx_file_perms;
+allow lenovoparts_appopt system_file:file rx_file_perms;
+
+# cmd package compile
+binder_use(lenovoparts_appopt)
+binder_call(lenovoparts_appopt, system_server)
+allow lenovoparts_appopt package_service:service_manager find;
+allow lenovoparts_appopt servicemanager:binder call;
+
+get_prop(lenovoparts_appopt, lenovoparts_appopt_prop)
+set_prop(lenovoparts_appopt, lenovoparts_appopt_prop)

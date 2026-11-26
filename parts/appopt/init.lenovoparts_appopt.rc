@@ -1,0 +1,12 @@
+# Copyright (C) 2026 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+
+service lenovoparts_appopt /system_ext/bin/lenovoparts_appopt
+    user shell
+    group shell
+    oneshot
+    disabled
+
+on property:sys.lenovoparts.appopt.request=start
+    start lenovoparts_appopt

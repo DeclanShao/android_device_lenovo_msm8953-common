@@ -20,8 +20,8 @@ cc_library_shared {
         "-DVENUS_PRESENT",
     ],
     include_dirs: [
-        "device/xiaomi/mido/camera/mm-image-codec/qexif",
-        "device/xiaomi/mido/camera/mm-image-codec/qomx_core",
+        "device/lenovo/msm8953/camera/mm-image-codec/qexif",
+        "device/lenovo/msm8953/camera/mm-image-codec/qomx_core",
         "hardware/qcom-caf/msm8953/media/libstagefrighthw",
         "hardware/qcom-caf/msm8953/media/mm-core/inc",
         "system/memory/libion/kernel-headers",

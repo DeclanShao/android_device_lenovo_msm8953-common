@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/mido
+DEVICE_PATH := device/lenovo/msm8953
 
 # Architecture
 TARGET_ARCH := arm64
@@ -55,7 +55,7 @@ BOARD_KERNEL_CMDLINE += androidboot.android_dt_dir=/non-existent androidboot.boo
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mido
+TARGET_KERNEL_SOURCE := kernel/lenovo/msm8953
 TARGET_KERNEL_VERSION := 4.19
 
 # ART
@@ -115,7 +115,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
+    hardware/lenovo/vintf/lenovo_framework_compatibility_matrix.xml \
     $(DEVICE_PATH)/dolby_compat_framework_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE   := hardware/qcom-caf/common/compatibility_matrix.xml
@@ -137,9 +137,9 @@ BOARD_SUPER_PARTITION_METADATA_DEVICE := system
 BOARD_SUPER_PARTITION_CUST_DEVICE_SIZE := 872415232
 BOARD_SUPER_PARTITION_SYSTEM_DEVICE_SIZE := 3221225472
 BOARD_SUPER_PARTITION_SIZE := $(shell expr $(BOARD_SUPER_PARTITION_CUST_DEVICE_SIZE) + $(BOARD_SUPER_PARTITION_SYSTEM_DEVICE_SIZE) )
-BOARD_SUPER_PARTITION_GROUPS := mido_dynamic_partitions
-BOARD_MIDO_DYNAMIC_PARTITIONS_SIZE := $(shell expr $(BOARD_SUPER_PARTITION_SIZE) - 4194304 )
-BOARD_MIDO_DYNAMIC_PARTITIONS_PARTITION_LIST := $(ALL_PARTITIONS)
+BOARD_SUPER_PARTITION_GROUPS := msm8953_dynamic_partitions
+BOARD_MSM8953_DYNAMIC_PARTITIONS_SIZE := $(shell expr $(BOARD_SUPER_PARTITION_SIZE) - 4194304 )
+BOARD_MSM8953_DYNAMIC_PARTITIONS_PARTITION_LIST := $(ALL_PARTITIONS)
 
 # Partitions - reserved size
 $(foreach p, $(call to-upper, $(SSI_PARTITIONS)), \
@@ -193,4 +193,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
--include vendor/xiaomi/mido/BoardConfigVendor.mk
+-include vendor/lenovo/msm8953/BoardConfigVendor.mk

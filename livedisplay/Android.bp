@@ -3,9 +3,9 @@
 // SPDX-License-Identifier: Apache-2.0
 
 cc_binary {
-    name: "vendor.lineage.livedisplay-service.xiaomi_mido",
-    init_rc: ["vendor.lineage.livedisplay-service.xiaomi_mido.rc"],
-    vintf_fragments: ["vendor.lineage.livedisplay-service.xiaomi_mido.xml"],
+    name: "vendor.lineage.livedisplay-service.lenovo_msm8953",
+    init_rc: ["vendor.lineage.livedisplay-service.lenovo_msm8953.rc"],
+    vintf_fragments: ["vendor.lineage.livedisplay-service.lenovo_msm8953.xml"],
     relative_install_path: "hw",
     srcs: [
         "PictureAdjustment.cpp",

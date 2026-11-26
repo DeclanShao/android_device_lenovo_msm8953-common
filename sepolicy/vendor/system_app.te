@@ -9,7 +9,7 @@ binder_call(system_app vold)
 allow system_app fm_radio_device:chr_file { ioctl open read };
 get_prop(system_app, vendor_bluetooth_prop)
 
-# XiaomiParts
+# LenovoParts
 allow system_app {
     kcal_dev
     sysfs_hgain

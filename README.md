@@ -1,4 +1,4 @@
-# Device Tree for Xiaomi Redmi Note 4 & 4x (Mido)
+# Device Tree for Lenovo Redmi Note 4 & 4x (Msm8953)
 
 ## Spec Sheet
 

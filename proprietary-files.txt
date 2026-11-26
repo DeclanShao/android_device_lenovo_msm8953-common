@@ -1,4 +1,4 @@
-# All unpinned blobs are extracted from xiaomi/mido/mido:7.0/NRD90M/V11.0.2.0.NCFMIXM:user/release-keys
+# All unpinned blobs are extracted from lenovo/msm8953/msm8953:7.0/NRD90M/V11.0.2.0.NCFMIXM:user/release-keys
 
 # Current blobs with ELF checks disabled:
 # libmmcamera_faceproc, libmmcamera_faceproc2 depends on NDK libc and build is unable to resolve its symbols

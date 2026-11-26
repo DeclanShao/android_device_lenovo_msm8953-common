@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#define LOG_TAG "vendor.lineage.livedisplay-service.xiaomi_mido"
+#define LOG_TAG "vendor.lineage.livedisplay-service.lenovo_msm8953"
 
 #include <android-base/logging.h>
 #include <android/binder_manager.h>

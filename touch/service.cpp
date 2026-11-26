@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.touch-service.xiaomi_mido"
+#define LOG_TAG "vendor.lineage.touch-service.lenovo_msm8953"
 
 #include "GloveMode.h"
 #include "KeyDisabler.h"

@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, vendor/xiaomi/mido/mido-vendor.mk)
+$(call inherit-product, vendor/lenovo/msm8953/msm8953-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Add common definitions for Qualcomm
@@ -51,7 +51,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     bootable/deprecated-ota \
-    hardware/xiaomi
+    hardware/lenovo
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -175,8 +175,8 @@ $(call soong_config_set_bool,surfaceflinger,register_displayservice,true)
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
-    XiaomiDolby \
-    XiaomiParts
+    LenovoDolby \
+    LenovoParts
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -203,7 +203,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.xiaomi_mido
+    android.hardware.biometrics.fingerprint@2.3-service.lenovo_msm8953
 
 # FM
 PRODUCT_PACKAGES += \
@@ -241,7 +241,7 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.qti_recovery
 
 # Init
-$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_mido)
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_msm8953)
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -283,7 +283,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay-service.xiaomi_mido
+    vendor.lineage.livedisplay-service.lenovo_msm8953
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -317,7 +317,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/perf-profile0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile0.conf
 
 $(call soong_config_set_bool,qtipower,interaction_boost,true)
-$(call soong_config_set,qtipower,tap_to_wake_node,/proc/sys/dev/xiaomi_msm8953_touchscreen/enable_dt2w)
+$(call soong_config_set,qtipower,tap_to_wake_node,/proc/sys/dev/lenovo_msm8953_touchscreen/enable_dt2w)
 
 # Public libraries
 PRODUCT_COPY_FILES += \
@@ -364,11 +364,11 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     qti_telephony_utils_prd.xml \
     telephony-ext \
-    xiaomi-telephony-stub
+    lenovo-telephony-stub
 
 PRODUCT_BOOT_JARS += \
     telephony-ext \
-    xiaomi-telephony-stub
+    lenovo-telephony-stub
 
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay
@@ -400,11 +400,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
 PRODUCT_PACKAGES += \
-    android.hardware.thermal-service.qti.xiaomi_mido
+    android.hardware.thermal-service.qti.lenovo_msm8953
 
 # Touch features
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch-service.xiaomi_mido
+    vendor.lineage.touch-service.lenovo_msm8953
 
 # USB HAL
 PRODUCT_SOONG_NAMESPACES += \

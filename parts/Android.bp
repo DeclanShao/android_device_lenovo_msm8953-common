@@ -5,7 +5,7 @@
 //
 
 android_app {
-    name: "XiaomiParts",
+    name: "LenovoParts",
 
     srcs: ["src/**/*.java"],
     resource_dirs: ["res"],
@@ -20,8 +20,8 @@ android_app {
     ],
 
     required: [
-        "init.xiaomiparts_appopt.rc",
-        "xiaomiparts_appopt",
+        "init.lenovoparts_appopt.rc",
+        "lenovoparts_appopt",
     ],
 
     optimize: {
@@ -31,15 +31,15 @@ android_app {
 }
 
 sh_binary {
-    name: "xiaomiparts_appopt",
-    src: "appopt/xiaomiparts_appopt.sh",
-    filename: "xiaomiparts_appopt",
+    name: "lenovoparts_appopt",
+    src: "appopt/lenovoparts_appopt.sh",
+    filename: "lenovoparts_appopt",
     system_ext_specific: true,
 }
 
 prebuilt_etc {
-    name: "init.xiaomiparts_appopt.rc",
-    src: "appopt/init.xiaomiparts_appopt.rc",
+    name: "init.lenovoparts_appopt.rc",
+    src: "appopt/init.lenovoparts_appopt.rc",
     sub_dir: "init",
     system_ext_specific: true,
 }

@@ -1,2 +1,2 @@
-# XiaomiParts App optimization
-set_prop(system_app, xiaomiparts_appopt_prop)
+# LenovoParts App optimization
+set_prop(system_app, lenovoparts_appopt_prop)
