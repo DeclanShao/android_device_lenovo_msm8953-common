@@ -67,25 +67,6 @@ blob_fixups: blob_fixups_user_type = {
     # Dolby
     ('vendor/lib64/libdlbdsservice.so', 'vendor/lib/libstagefright_soft_ddpdec.so'): blob_fixup()
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
-    # Fingerprint - shims & uneeded
-    'vendor/bin/gx_fpd': blob_fixup()
-        .remove_needed('libunwind.so')
-        .remove_needed('libbacktrace.so')
-        .add_needed('libshims_gxfpd.so')
-        .add_needed('fakelogprint.so'),
-    'vendor/lib64/libfpservice.so': blob_fixup()
-        .add_needed('libbinder_shim.so'),
-    ('vendor/lib64/hw/fingerprint.goodix.so', 'vendor/lib64/gxfingerprint.default.so'): blob_fixup()
-        .add_needed('fakelogprint.so'),
-    # Fingerprint - liblog dep.
-    ('vendor/lib64/libfp_client.so', 'libfpservice.so'): blob_fixup()
-        .add_needed('liblog.so'),
-    # Fingerprint - libstdc++.so' -> 'libstdc++_vendor.so
-    ('vendor/lib64/libfp_client.so', 'vendor/lib64/libfpservice.so', 'vendor/lib64/libfpnav.so', 'vendor/lib64/hw/fingerprint.goodix.so', 'vendor/lib64/gxfingerprint.default.so'): blob_fixup()
-        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
-    # Fingerprint - so name fixups
-    ('vendor/lib64/hw/fingerprint.goodix.so', 'vendor/lib64/hw/gxfingerprint.default.so'):blob_fixup()
-        .fix_soname(),
     # Thermal
     'vendor/lib64/libthermalfeature.so': blob_fixup()
         .binary_regex_replace(b'system/etc/', b'vendor/etc/'),

@@ -28,17 +28,3 @@ cc_library_shared {
     shared_libs: ["libui"],
     vendor: true
 }
-
-// Goodix
-cc_library_shared {
-    name: "fakelogprint",
-    srcs: ["fakelogprint.cpp"],
-    shared_libs: ["liblog"],
-    vendor: true
-}
-
-cc_library_shared {
-    name: "libshims_gxfpd",
-    srcs: ["gxfpd_shim.cpp"],
-    vendor: true
-}

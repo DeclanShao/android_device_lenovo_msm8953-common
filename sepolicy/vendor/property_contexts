@@ -21,15 +21,6 @@ persist.partial.skip            u:object_r:camera_prop:s0
 persist.vendor.camera.  u:object_r:camera_prop:s0
 ro.camera.         u:object_r:camera_prop:s0
 
-# Fingerprint
-fpc.fp.miui.token               u:object_r:vendor_fp_prop:s0
-goodix.fp.                      u:object_r:vendor_fp_prop:s0
-ro.boot.fpsensor                u:object_r:vendor_fp_prop:s0
-ro.hardware.fingerprint         u:object_r:vendor_fp_prop:s0
-ro.register.count               u:object_r:vendor_fp_prop:s0
-ro.template.count               u:object_r:vendor_fp_prop:s0
-sys.fp.                         u:object_r:vendor_fp_prop:s0
-
 # Graphics HAL
 ro.hardware.chipname	u:object_r:deprecated_soc_prop:s0 exact string
 
@@ -45,8 +36,6 @@ vendor.target.init.complete     u:object_r:vendor_mpctl_prop:s0
 # Ril
 ro.build.software.version       u:object_r:vendor_radio_prop:s0
 ro.fota.oem                     u:object_r:vendor_radio_prop:s0
-ro.miui.region                  u:object_r:vendor_radio_prop:s0
-ro.miui.ui.version.code         u:object_r:vendor_radio_prop:s0
 ro.product.marketname           u:object_r:vendor_radio_prop:s0
 ro.product.mod_device           u:object_r:vendor_radio_prop:s0
 
