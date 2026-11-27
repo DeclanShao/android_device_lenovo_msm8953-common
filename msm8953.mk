@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, vendor/lenovo/msm8953/msm8953-vendor.mk)
+$(call inherit-product, vendor/lenovo/msm8953-common/msm8953-common-vendor.mk)
 
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)

@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/lenovo/msm8953
+COMMON_PATH := device/lenovo/msm8953-common
 
 # Architecture
 TARGET_ARCH := arm64
@@ -39,11 +39,11 @@ BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Device Properties
-TARGET_ODM_PROP := $(DEVICE_PATH)/odm.prop
-TARGET_PRODUCT_PROP := $(DEVICE_PATH)/product.prop
-TARGET_SYSTEM_EXT_PROP := $(DEVICE_PATH)/system_ext.prop
-TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP := $(DEVICE_PATH)/vendor.prop
+TARGET_ODM_PROP := $(COMMON_PATH)/odm.prop
+TARGET_PRODUCT_PROP := $(COMMON_PATH)/product.prop
+TARGET_SYSTEM_EXT_PROP := $(COMMON_PATH)/system_ext.prop
+TARGET_SYSTEM_PROP := $(COMMON_PATH)/system.prop
+TARGET_VENDOR_PROP := $(COMMON_PATH)/vendor.prop
 
 # Kernel
 TARGET_KERNEL_CONFIG := \
@@ -72,7 +72,7 @@ BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
 
 # Board Info
-TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+TARGET_BOARD_INFO_FILE := $(COMMON_PATH)/board-info.txt
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8953
@@ -94,7 +94,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/dsp:/dsp \
     /vendor/firmware_mnt:/firmware \
     /mnt/vendor/persist:/persist
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 SSI_PARTITIONS := product system system_ext
 TREBLE_PARTITIONS := odm vendor
@@ -116,8 +116,8 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/lenovo/vintf/lenovo_framework_compatibility_matrix.xml \
-    $(DEVICE_PATH)/dolby_compat_framework_matrix.xml
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+    $(COMMON_PATH)/dolby_compat_framework_matrix.xml
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE   := hardware/qcom-caf/common/compatibility_matrix.xml
 
 # IPA
@@ -157,10 +157,10 @@ TARGET_PER_MGR_ENABLED := true
 BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
+TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
@@ -172,8 +172,8 @@ VENDOR_SECURITY_PATCH := 2026-04-05
 # SELinux
 include device/lineage/sepolicy/libion/sepolicy.mk
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 
 # Treble
 PRODUCT_FULL_TREBLE_OVERRIDE := true
@@ -193,4 +193,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
--include vendor/lenovo/msm8953/BoardConfigVendor.mk
+-include vendor/lenovo/msm8953-common/BoardConfigVendor.mk

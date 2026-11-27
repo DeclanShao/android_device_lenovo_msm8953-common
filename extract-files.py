@@ -19,7 +19,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/lenovo/msm8953',
+    'device/lenovo/msm8953-common',
     'hardware/qcom-caf/msm8953',
     'vendor/qcom/opensource/dataservices',
     'vendor/qcom/opensource/commonsys/display',
@@ -74,7 +74,7 @@ blob_fixups: blob_fixups_user_type = {
 
 # Define the module
 module = ExtractUtilsModule(
-    'msm8953',
+    'msm8953-common',
     'lenovo',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
