@@ -1,18 +1,17 @@
    [
      {
-       "remote": "github-non-los",
-       "repository": "LineageOS/android_hardware_lenovo",
+       "repository": "android_hardware_lenovo",
        "target_path": "hardware/lenovo",
        "branch": "lineage-24.0"
      },
      {
        "repository": "android_vendor_lenovo_msm8953-common",
        "target_path": "vendor/lenovo/msm8953-common",
-       "branch": "cnb"
+       "branch": "lineage-24.0"
      },
      {
        "repository": "kernel_lenovo_msm8953",
        "target_path": "kernel/lenovo/msm8953",
-       "branch": "cnb"
+       "branch": "lineage-24.0"
      }
    ]
